@@ -1,6 +1,6 @@
 #Greenfoot project file
 class.Bullet.image=gold-ball.png
-class.MyWorld.image=istockphoto-1227598160-612x612.jpg
+class.MyWorld.image=image.jpg
 class.Player.image=steel-ball.png
 dependency1.from=MyWorld
 dependency1.to=Player

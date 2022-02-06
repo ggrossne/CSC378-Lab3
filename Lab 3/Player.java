@@ -16,7 +16,7 @@ public class Player extends Actor
     public void act()
     {
         movement();
-        if (spawnrate == 20)
+        if (spawnrate >= 20)
             spawnBullet();
         else
             spawnrate++;
