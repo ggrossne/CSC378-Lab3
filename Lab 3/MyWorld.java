@@ -19,7 +19,7 @@ public class MyWorld extends World
         super(1200, 800, 1);
         Player player = new Player();
         addObject(player, 600, 400);
-        addObject(new Timer(), 600, 400);
+        addObject(new Timer(), 30, 20);
     }
     
     public void spawnZombie(int numZombies)
@@ -28,10 +28,11 @@ public class MyWorld extends World
         {
             Zombie z = new Zombie();
             addObject(z, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
-            if (z.tooNear())
+            while (z.tooNear())
             {
                 i--;
                 removeObject(z);
+                addObject(z, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
             }
         }
 }

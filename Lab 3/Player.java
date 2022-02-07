@@ -26,6 +26,10 @@ public class Player extends Actor
             spawnBullet();
         else
             bulletSpawnRate++;
+            
+        Actor a = getOneIntersectingObject(Zombie.class);
+        if (a != null)
+            Greenfoot.stop();
         
     }
     
