@@ -14,7 +14,7 @@ public class Bullet extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GifImage bullet = new GifImage("Rainbow Projectile.gif");
+    GifImage bullet = new GifImage("Rainbow Projectile_RESIZE.gif");
     
     public void act()
     {

@@ -38,4 +38,11 @@ public class Zombie extends Actor
         if (movingVertically) setLocation(getX(), getY()+(int)Math.signum(actor.getY()-getY()));
         else setLocation(getX()+(int)Math.signum(actor.getX()-getX()), getY());
     }
+    
+    
+    
+    public boolean tooNear()
+    {
+        return !getObjectsInRange(200, Player.class).isEmpty(); //100 is the range around the Player where no zombie should be placed. adjust as needed
+    }   
 }

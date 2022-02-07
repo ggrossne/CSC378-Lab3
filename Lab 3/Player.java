@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
-    int spawnrate = 20;
+    int bulletSpawnRate = 20;
     int score = 0;
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
@@ -17,10 +17,11 @@ public class Player extends Actor
     public void act()
     {
         movement();
-        if (spawnrate >= 20)
+        if (bulletSpawnRate >= 20)
             spawnBullet();
         else
-            spawnrate++;
+            bulletSpawnRate++;
+        
     }
     
     private void movement()
@@ -43,6 +44,6 @@ public class Player extends Actor
             getWorld().removeObject(bullet);
             return;
         }
-        spawnrate = 0;
+        bulletSpawnRate = 0;
     }
 }
