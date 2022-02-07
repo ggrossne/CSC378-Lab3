@@ -11,7 +11,7 @@ public class Player extends Actor
     int bulletSpawnRate = 20;
     int score = 0;
     
-    GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right-2.gif");
+    GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right-3.gif");
     
 
     /**
