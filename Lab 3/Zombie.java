@@ -16,7 +16,14 @@ public class Zombie extends Actor
     public void act()
     {
         // Add your action code here.
+        Actor a = getOneIntersectingObject(Bullet.class);
         followPlayer();
+        if (a != null)
+        {
+            getWorld().removeObject(a);
+            getWorld().removeObject(this);
+        }
+            
     }
     
     private void followPlayer()
