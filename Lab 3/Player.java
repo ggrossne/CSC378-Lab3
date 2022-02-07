@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
-    int spawnrate = 20;
+    int bulletSpawnRate = 20;
     int score = 0;
     
     GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right-2.gif");
@@ -22,10 +22,11 @@ public class Player extends Actor
     {
         setImage( rightWalk.getCurrentImage() );
         movement();
-        if (spawnrate >= 20)
+        if (bulletSpawnRate >= 20)
             spawnBullet();
         else
-            spawnrate++;
+            bulletSpawnRate++;
+        
     }
     
     private void movement()
@@ -48,6 +49,6 @@ public class Player extends Actor
             getWorld().removeObject(bullet);
             return;
         }
-        spawnrate = 0;
+        bulletSpawnRate = 0;
     }
 }

@@ -20,4 +20,18 @@ public class MyWorld extends World
         Player player = new Player();
         addObject(player, 600, 400);
     }
+    
+    public void spawnZombie(int numZombies)
+    {
+        for (int i=0; i<numZombies; i++)
+        {
+            Zombie z = new Zombie();
+            addObject(z, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+            if (z.tooNear())
+            {
+                i--;
+                removeObject(z);
+            }
+        }
+}
 }
