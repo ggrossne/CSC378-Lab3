@@ -27,7 +27,7 @@ public class Counter extends Actor
             //color.WHITE
             GreenfootImage image = getImage();
             Font font = image.getFont();
-            image.setFont(font.deriveFont(20.0F));  // use larger font
+            image.setFont(font.deriveFont(20.0F));
             
             updateImage();
         }
