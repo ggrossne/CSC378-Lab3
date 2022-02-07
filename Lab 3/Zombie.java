@@ -43,6 +43,6 @@ public class Zombie extends Actor
     
     public boolean tooNear()
     {
-        return !getObjectsInRange(200, Player.class).isEmpty(); //100 is the range around the Player where no zombie should be placed. adjust as needed
+        return !getObjectsInRange(100, Player.class).isEmpty(); //100 is the range around the Player where no zombie should be placed. adjust as needed
     }   
 }
