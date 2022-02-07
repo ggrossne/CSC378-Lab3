@@ -2,11 +2,29 @@
 class.Bullet.image=gold-ball.png
 class.MyWorld.image=Dance_Club_July_2014.png
 class.Player.image=steel-ball.png
+<<<<<<< HEAD
+class.ScoreBoard.image=road.jpg
+=======
 class.Zombie.image=ball.png
+>>>>>>> e19f8a1eb0b104d40b1243389c197506df306da3
 dependency1.from=MyWorld
-dependency1.to=Player
+dependency1.to=Counter
 dependency1.type=UsesDependency
 dependency2.from=MyWorld
+<<<<<<< HEAD
+dependency2.to=Player
+dependency2.type=UsesDependency
+dependency3.from=Player
+dependency3.to=Bullet
+dependency3.type=UsesDependency
+editor.fx.0.height=918
+editor.fx.0.width=780
+editor.fx.0.x=-6
+editor.fx.0.y=0
+height=918
+package.numDependencies=3
+package.numTargets=7
+=======
 dependency2.to=Zombie
 dependency2.type=UsesDependency
 dependency3.from=Bullet
@@ -28,6 +46,7 @@ editor.fx.0.y=140
 height=692
 package.numDependencies=6
 package.numTargets=6
+>>>>>>> e19f8a1eb0b104d40b1243389c197506df306da3
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -57,7 +76,11 @@ target2.width=120
 target2.x=0
 target2.y=0
 target3.height=70
+<<<<<<< HEAD
+target3.name=Counter
+=======
 target3.name=Player
+>>>>>>> e19f8a1eb0b104d40b1243389c197506df306da3
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=120
@@ -78,14 +101,30 @@ target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< HEAD
+target6.name=ScoreBoard
+=======
 target6.name=MyWorld
+>>>>>>> e19f8a1eb0b104d40b1243389c197506df306da3
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
 target6.x=0
 target6.y=0
+<<<<<<< HEAD
+target7.height=70
+target7.name=MyWorld
+target7.showInterface=false
+target7.type=ClassTarget
+target7.width=120
+target7.x=0
+target7.y=0
+version=3.0.0
+width=780
+=======
 version=3.0.0
 width=1292
+>>>>>>> e19f8a1eb0b104d40b1243389c197506df306da3
 world.lastInstantiated=MyWorld
-xPosition=0
+xPosition=761
 yPosition=0
