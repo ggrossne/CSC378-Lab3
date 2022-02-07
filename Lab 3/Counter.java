@@ -6,12 +6,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Counter extends Actor
+public class Counter extends UI
 {
     private int value = 0;
     private int target = 0;
     private String text;
     private int stringLength;
+    
+    private int level = 1;
     
     public Counter()
     {
@@ -57,6 +59,27 @@ public class Counter extends Actor
     {
         return value;
     }
+    
+    public void upLevel()
+    {
+        level++; //seems repetitive??
+        add(1);
+    }
+    
+    public int getLevel()
+    {
+        return level;
+    }
+
+    public void score()
+    {
+        add(1);
+    }
+    
+    public void health()
+    {
+        subtract(1);
+    }
 
     /**
      * Make the image
@@ -68,5 +91,3 @@ public class Counter extends Actor
         image.drawString(text + value, 1, 18);
     }
 }
-
-
