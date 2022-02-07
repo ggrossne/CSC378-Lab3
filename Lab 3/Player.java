@@ -35,10 +35,10 @@ public class Player extends Actor
     
     private void movement()
     {
-        if(Greenfoot.isKeyDown("d")) setLocation(getX()+2, getY());
-        else if(Greenfoot.isKeyDown("a")) setLocation(getX()-2, getY());
-        else if(Greenfoot.isKeyDown("s")) setLocation(getX(), getY()+2);
-        else if(Greenfoot.isKeyDown("w")) setLocation(getX(), getY()-2);
+        if(Greenfoot.isKeyDown("d")) setLocation(getX()+3, getY());
+        else if(Greenfoot.isKeyDown("a")) setLocation(getX()-3, getY());
+        else if(Greenfoot.isKeyDown("s")) setLocation(getX(), getY()+3);
+        else if(Greenfoot.isKeyDown("w")) setLocation(getX(), getY()-3);
     }
     
     private void spawnBullet()
