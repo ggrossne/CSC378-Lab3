@@ -20,6 +20,7 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
+<<<<<<< HEAD
         // Create a new world with 600x400 cells with a 
         //cell size of 1x1 pixels.
         super(600, 400, 1);
@@ -56,5 +57,26 @@ public class MyWorld extends World
     public void health()
     {
         healthCounter.subtract(1);
+=======
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(1200, 800, 1);
+        Player player = new Player();
+        addObject(player, 600, 400);
+        addObject(new Timer(), 600, 400);
+>>>>>>> e19f8a1eb0b104d40b1243389c197506df306da3
     }
+    
+    public void spawnZombie(int numZombies)
+    {
+        for (int i=0; i<numZombies; i++)
+        {
+            Zombie z = new Zombie();
+            addObject(z, Greenfoot.getRandomNumber(getWidth()), Greenfoot.getRandomNumber(getHeight()));
+            if (z.tooNear())
+            {
+                i--;
+                removeObject(z);
+            }
+        }
+}
 }
