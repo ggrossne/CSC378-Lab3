@@ -10,7 +10,7 @@ public class Zombie extends Actor
 {
     private boolean movingVertically = Greenfoot.getRandomNumber(2) == 0;
     
-    GifImage rightWalk = new GifImage("Zombie 1 Walking Right-3.gif");
+    GifImage rightWalk = new GifImage("Zombie 1 Walking Right-5.gif");
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
