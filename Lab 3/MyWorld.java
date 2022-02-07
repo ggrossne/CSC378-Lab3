@@ -19,6 +19,7 @@ public class MyWorld extends World
         super(1200, 800, 1);
         Player player = new Player();
         addObject(player, 600, 400);
+        addObject(new Timer(), 600, 400);
     }
     
     public void spawnZombie(int numZombies)

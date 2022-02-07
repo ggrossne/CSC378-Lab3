@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Timer extends Actor
 {
     private int timer = 18000;
-    
     public void act() 
     {
         timer--;
