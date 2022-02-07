@@ -16,6 +16,7 @@ public class Bullet extends Actor
     
     GifImage bullet = new GifImage("Rainbow Projectile-4.gif");
     
+    
     public void act()
     {
         setImage( bullet.getCurrentImage() );

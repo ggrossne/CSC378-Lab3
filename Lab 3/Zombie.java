@@ -9,12 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Zombie extends Actor
 {
     private boolean movingVertically = Greenfoot.getRandomNumber(2) == 0;
+    
+    GifImage rightWalk = new GifImage("Zombie 1 Walking Right-2.gif");
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+        setImage( rightWalk.getCurrentImage() );
+        
         Player player = (Player)getWorld().getObjects(Player.class).get(0);
         // Add your action code here.
         Actor a = getOneIntersectingObject(Bullet.class);

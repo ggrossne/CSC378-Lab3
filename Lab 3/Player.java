@@ -10,12 +10,17 @@ public class Player extends Actor
 {
     int spawnrate = 20;
     int score = 0;
+    
+    GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right-2.gif");
+    
+
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
+        setImage( rightWalk.getCurrentImage() );
         movement();
         if (spawnrate >= 20)
             spawnBullet();
