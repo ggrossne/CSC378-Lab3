@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Counter
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Counter\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Counter\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=Counter()
 comment10.params=
 comment10.target=void\ health()
 comment11.params=
 comment11.target=void\ updateImage()
-comment11.text=\r\n\ Make\ the\ image\r\n
+comment11.text=\n\ Make\ the\ image\n
 comment2.params=prefix
 comment2.target=Counter(java.lang.String)
 comment3.params=
