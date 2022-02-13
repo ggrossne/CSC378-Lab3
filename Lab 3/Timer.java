@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Timer extends Actor
+public class Timer extends UI
 {
     private int timer = 18000;
     public void act() 
