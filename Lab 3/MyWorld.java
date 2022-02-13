@@ -12,6 +12,10 @@ public class MyWorld extends World
     Counter levelCounter = new Counter("Level: ");
     Counter healthCounter = new Counter("Health: ");
     public GreenfootSound backgroundMusic = new GreenfootSound("Sissy That Walk.mp3");
+    public Health heart1 = new Health();
+    public Health heart2 = new Health();
+    public Health heart3 = new Health();
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -25,7 +29,9 @@ public class MyWorld extends World
         addObject(new Player(), 600, 400);
         addObject(new UI(), 30, 20);
         addObject(new Timer(), 30, 20);
-        addObject(new Health(), 50, 50);
+        addObject(heart1, 50, 50);
+        addObject(heart2, 120, 50);
+        addObject(heart3, 190, 50);
 
         addObject(counter, 535, 30);
 
