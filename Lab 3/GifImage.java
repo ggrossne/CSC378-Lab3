@@ -137,6 +137,9 @@ public class GifImage
             GreenfootImage image = new GreenfootImage(decode.getFrame(i).getWidth(), decode.getFrame(i).getHeight());
             image.drawImage(decode.getFrame(i), 0, 0);
             delay[i] = decode.getDelay(i);
+            // Method to resize gifs without exporting them at different resolution
+            // Does not discriminate between gifs
+            image.scale(image.getWidth()/2 + 10, image.getHeight()/2 + 10);
             images[i] = image;
         }
         time = System.currentTimeMillis();

@@ -89,6 +89,6 @@ public class Counter extends UI
         GreenfootImage image = getImage();
         image.clear();
         image.setColor(Color.WHITE);
-        image.drawString(text + value, 1, 18);
+        image.drawString(text + value * 100, 1, 18);
     }
 }

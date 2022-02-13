@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class MyWorld here.
@@ -8,9 +9,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-    public Counter counter = new Counter("Score: ");
+    public Counter counter = new Counter("");
     Counter levelCounter = new Counter("Level: ");
     Counter healthCounter = new Counter("Health: ");
+    public GreenfootSound backgroundMusic = new GreenfootSound("Sissy That Walk.mp3");
+    public Health heart1 = new Health();
+    public Health heart2 = new Health();
+    public Health heart3 = new Health();
+    public int health = 3;
+    
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -24,15 +31,54 @@ public class MyWorld extends World
         addObject(new Player(), 600, 400);
         addObject(new UI(), 30, 20);
         addObject(new Timer(), 30, 20);
+        addObject(heart1, 50, 50);
+        addObject(heart2, 120, 50);
+        addObject(heart3, 190, 50);
 
-        addObject(counter, 535, 30);
-
-        levelCounter.add(1);
-        addObject(levelCounter, 540, 60);
-
-        healthCounter.add(1);
-        addObject(healthCounter, 540, 90);
+        addObject(counter, 1100, 50);
         prepare();
+    }
+    
+    public void updateHealth()
+    {
+        int zombieCount = getObjects(Zombie.class).size();
+        List<Zombie> zombies = getObjects(Zombie.class);
+        
+        Player player = getObjects(Player.class).get(0);
+        health--;
+        if (health == 2)
+        {
+            removeObject(heart3);
+        }
+        else if (health == 1)
+        {
+            player.setLocation(600, 400);
+            removeObject(heart2);
+        }
+        else
+        {
+            player.setLocation(600, 400);
+            removeObject(heart3);
+            // MOVE TO END SCREEN
+            Greenfoot.stop();
+        }
+        
+        while (zombieCount > 0) {
+            removeObject(zombies.get(zombieCount - 1));
+            zombieCount--;
+        }
+        //player.setLocation(600, 400);
+    }
+    
+    public void stopped()
+    {
+        backgroundMusic.pause();
+    }
+    
+    public void started()
+    {
+        backgroundMusic.setVolume(40);
+        backgroundMusic.playLoop();
     }
 
     
