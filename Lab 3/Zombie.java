@@ -12,7 +12,6 @@ public class Zombie extends Actor
     private boolean flip = true;
     int rand_int;
     public GreenfootSound death = new GreenfootSound("z_death.mp3");
-    
     GifImage rightWalk = new GifImage("Zombie Walking Right.gif");
     GifImage leftWalk = new GifImage("Zombie Walking Left.gif");
     GifImage rightHurt = new GifImage("Zombie Walking Right Hurt.gif");
@@ -57,12 +56,24 @@ public class Zombie extends Actor
     private void followPlayer()
     {
         Actor actor = (Actor)getWorld().getObjects(Player.class).get(0);
-        if (Greenfoot.getRandomNumber(50) == 0) movingVertically = Greenfoot.getRandomNumber(2) == 0;
+        if (Greenfoot.getRandomNumber(50) == 0)
+        {
+            movingVertically = Greenfoot.getRandomNumber(2) == 0;
+        }
         // change axis if no movement required along current axis
-        if ((movingVertically && getY() == actor.getY()) || (!movingVertically && getX() == actor.getX())) movingVertically = !movingVertically;
+        if ((movingVertically && getY() == actor.getY()) || (!movingVertically && getX() == actor.getX()))
+        {
+            movingVertically = !movingVertically;
+        }
         // move along current axis
-        if (movingVertically) setLocation(getX(), getY()+((int)Math.signum(actor.getY()-getY())) * rand_int);
-        else setLocation(getX()+((int)Math.signum(actor.getX()-getX())) * rand_int, getY());
+        if (movingVertically)
+        {
+            setLocation(getX(), getY()+((int)Math.signum(actor.getY()-getY())) * rand_int);
+        }
+        else
+        {
+            setLocation(getX()+((int)Math.signum(actor.getX()-getX())) * rand_int, getY());
+        }
         
     }
     

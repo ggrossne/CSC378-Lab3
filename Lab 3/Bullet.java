@@ -15,25 +15,31 @@ public class Bullet extends Actor
      */
     
     GifImage bulletLeftRight = new GifImage("Rainbow Projectile LeftRight.gif");
-    GifImage bulletUpDown = new GifImage("Rainbow Projectile UpDown.gif");
+    //Rotation was smart omg GifImage bulletUpDown = new GifImage("Rainbow Projectile UpDown.gif");
     
     
     public void act()
     {
         setImage( bulletLeftRight.getCurrentImage() );
         
-        if(direction == "right") setLocation(getX()+5, getY());
-        else if(direction == "left") setLocation(getX()-5, getY());
-        else if(direction == "down") {
+        if(direction == "right")
+        {
+            setLocation(getX()+5, getY());
+        }
+        else if(direction == "left")
+        {
+            setLocation(getX()-5, getY());
+        }
+        else if(direction == "down") 
+        {
             setRotation(90);
             setLocation(getX(), getY()+5);
         }
-        else if(direction == "up") {
+        else if(direction == "up") 
+        {
             setRotation(90);
             setLocation(getX(), getY()-5);
         }
-        
-        
         
         if (isAtEdge())
             getWorld().removeObject(this);
