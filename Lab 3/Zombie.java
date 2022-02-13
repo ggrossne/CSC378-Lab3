@@ -9,6 +9,7 @@ import java.util.Random;
 public class Zombie extends Actor
 {
     private boolean movingVertically = Greenfoot.getRandomNumber(2) == 0;
+    private boolean flip = true;
     int rand_int;
     public GreenfootSound death = new GreenfootSound("z_death.mp3");
     GifImage rightWalk = new GifImage("Zombie 1 Walking Right-5.gif");
@@ -28,6 +29,12 @@ public class Zombie extends Actor
         setImage( rightWalk.getCurrentImage() );
         
         Player player = (Player)getWorld().getObjects(Player.class).get(0);
+        // Code to try and flip zombies based on player position, didn't work
+        //if ((int)Math.signum(player.getX()-getX()) == -1 && flip)
+        //{
+        //    getImage().mirrorHorizontally();
+        //    flip = false;
+        //}
         // Add your action code here.
         Actor a = getOneIntersectingObject(Bullet.class);
         MyWorld world = (MyWorld)getWorld();
@@ -52,6 +59,7 @@ public class Zombie extends Actor
         // move along current axis
         if (movingVertically) setLocation(getX(), getY()+((int)Math.signum(actor.getY()-getY())) * rand_int);
         else setLocation(getX()+((int)Math.signum(actor.getX()-getX())) * rand_int, getY());
+        
     }
     
     
