@@ -10,6 +10,7 @@ public class Zombie extends Actor
 {
     private boolean movingVertically = Greenfoot.getRandomNumber(2) == 0;
     int rand_int;
+    public GreenfootSound death = new GreenfootSound("z_death.mp3");
     GifImage rightWalk = new GifImage("Zombie 1 Walking Right-5.gif");
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever
@@ -19,6 +20,7 @@ public class Zombie extends Actor
     {
         Random rand = new Random();
         rand_int = rand.nextInt(3) + 1;
+        death.setVolume(40);
     }
     
     public void act()
@@ -32,6 +34,7 @@ public class Zombie extends Actor
         followPlayer();
         if (a != null)
         {
+            death.play();
             player.score++;
             world.counter.score();
             getWorld().removeObject(a);

@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class MyWorld extends World
 {
-    public Counter counter = new Counter("Score: ");
+    public Counter counter = new Counter("");
     Counter levelCounter = new Counter("Level: ");
     Counter healthCounter = new Counter("Health: ");
     public GreenfootSound backgroundMusic = new GreenfootSound("Sissy That Walk.mp3");
@@ -35,13 +35,7 @@ public class MyWorld extends World
         addObject(heart2, 120, 50);
         addObject(heart3, 190, 50);
 
-        addObject(counter, 535, 30);
-
-        levelCounter.add(1);
-        addObject(levelCounter, 540, 60);
-
-        healthCounter.add(1);
-        addObject(healthCounter, 540, 90);
+        addObject(counter, 1100, 50);
         prepare();
     }
     
