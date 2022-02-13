@@ -65,6 +65,7 @@ public class MyWorld extends World
         {
             player.setLocation(600, 400);
             removeObject(heart3);
+            // MOVE TO END SCREEN
             Greenfoot.stop();
         }
         
@@ -72,7 +73,7 @@ public class MyWorld extends World
             removeObject(zombies.get(zombieCount - 1));
             zombieCount--;
         }
-        player.setLocation(600, 400);
+        //player.setLocation(600, 400);
     }
     
     public void stopped()

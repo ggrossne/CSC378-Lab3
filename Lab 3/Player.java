@@ -12,6 +12,7 @@ public class Player extends Actor
     int score = 0;
     public GreenfootSound oop = new GreenfootSound("oop.mp3");
     GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right-3.gif");
+    GreenfootSound pew = new GreenfootSound("laser.mp3");
     
 
     /**
@@ -39,10 +40,10 @@ public class Player extends Actor
     
     private void movement()
     {
-        if(Greenfoot.isKeyDown("d")) setLocation(getX()+3, getY());
-        else if(Greenfoot.isKeyDown("a")) setLocation(getX()-3, getY());
-        else if(Greenfoot.isKeyDown("s")) setLocation(getX(), getY()+3);
-        else if(Greenfoot.isKeyDown("w")) setLocation(getX(), getY()-3);
+        if(Greenfoot.isKeyDown("d")) setLocation(getX()+4, getY());
+        else if(Greenfoot.isKeyDown("a")) setLocation(getX()-4, getY());
+        else if(Greenfoot.isKeyDown("s")) setLocation(getX(), getY()+4);
+        else if(Greenfoot.isKeyDown("w")) setLocation(getX(), getY()-4);
     }
     
     private void spawnBullet()
@@ -57,6 +58,8 @@ public class Player extends Actor
             getWorld().removeObject(bullet);
             return;
         }
+        pew.stop();
+        pew.play();
         bulletSpawnRate = 0;
     }
 }

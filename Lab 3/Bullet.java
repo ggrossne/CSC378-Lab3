@@ -21,10 +21,16 @@ public class Bullet extends Actor
     {
         setImage( bullet.getCurrentImage() );
         
-        if(direction == "right") setLocation(getX()+4, getY());
-        else if(direction == "left") setLocation(getX()-4, getY());
-        else if(direction == "down") setLocation(getX(), getY()+4);
-        else if(direction == "up") setLocation(getX(), getY()-4);
+        if(direction == "right") setLocation(getX()+5, getY());
+        else if(direction == "left") setLocation(getX()-5, getY());
+        else if(direction == "down") {
+            setRotation(90);
+            setLocation(getX(), getY()+5);
+        }
+        else if(direction == "up") {
+            setRotation(90);
+            setLocation(getX(), getY()-5);
+        }
         
         
         
