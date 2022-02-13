@@ -34,7 +34,7 @@ public class MyWorld extends World
         addObject(heart1, 50, 50);
         addObject(heart2, 120, 50);
         addObject(heart3, 190, 50);
-
+        started();
         addObject(counter, 1100, 50);
         prepare();
     }
