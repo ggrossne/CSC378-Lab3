@@ -14,12 +14,13 @@ public class Bullet extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GifImage bullet = new GifImage("Rainbow Projectile-2.gif");
+    GifImage bulletLeftRight = new GifImage("Rainbow Projectile LeftRight.gif");
+    GifImage bulletUpDown = new GifImage("Rainbow Projectile UpDown.gif");
     
     
     public void act()
     {
-        setImage( bullet.getCurrentImage() );
+        setImage( bulletLeftRight.getCurrentImage() );
         
         if(direction == "right") setLocation(getX()+5, getY());
         else if(direction == "left") setLocation(getX()-5, getY());
