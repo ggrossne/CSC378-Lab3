@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
 
 /**
  * Write a description of class MyWorld here.
@@ -46,6 +47,10 @@ public class MyWorld extends World
     
     public void updateHealth()
     {
+        int zombieCount = getObjects(Zombie.class).size();
+        List<Zombie> zombies = getObjects(Zombie.class);
+        
+        Player player = getObjects(Player.class).get(0);
         health--;
         if (health == 2)
         {
@@ -53,13 +58,21 @@ public class MyWorld extends World
         }
         else if (health == 1)
         {
+            player.setLocation(600, 400);
             removeObject(heart2);
         }
         else
         {
+            player.setLocation(600, 400);
             removeObject(heart3);
             Greenfoot.stop();
         }
+        
+        while (zombieCount > 0) {
+            removeObject(zombies.get(zombieCount - 1));
+            zombieCount--;
+        }
+        player.setLocation(600, 400);
     }
     
     public void stopped()
