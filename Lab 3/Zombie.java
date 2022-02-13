@@ -14,7 +14,7 @@ public class Zombie extends Actor
     public GreenfootSound death = new GreenfootSound("z_death.mp3");
     GifImage rightWalk = new GifImage("Zombie Walking Right.gif");
     GifImage leftWalk = new GifImage("Zombie Walking Left.gif");
-    GifImage rightHurt = new GifImage("Zombie Walking Right Hurt.gif");
+    GifImage rightHurt = new GifImage("Zombie Walking Right Hurt Red.gif");
     GifImage leftHurt = new GifImage("Zombie Walking Left Hurt.gif");
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever
@@ -44,6 +44,7 @@ public class Zombie extends Actor
         followPlayer();
         if (a != null)
         {
+            setImage( rightHurt.getCurrentImage() );
             death.play();
             player.score++;
             world.counter.score();
