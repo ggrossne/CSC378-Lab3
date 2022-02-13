@@ -11,8 +11,8 @@ public class Timer extends UI
     private int timer = 18000;
     public void act() 
     {
-        GreenfootImage img = new GreenfootImage(""+timer / 60, 35, Color.WHITE, new Color(0, 0, 0, 0));
-        setImage(img);
+        //GreenfootImage img = new GreenfootImage(""+timer / 60, 35, Color.WHITE, new Color(0, 0, 0, 0));
+        //setImage(img);
         timer--;
         if (timer % 300 == 0)
             ((MyWorld)getWorld()).spawnZombie(2);

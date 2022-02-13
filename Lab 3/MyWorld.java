@@ -15,6 +15,7 @@ public class MyWorld extends World
     public Health heart1 = new Health();
     public Health heart2 = new Health();
     public Health heart3 = new Health();
+    public int health = 3;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -43,6 +44,24 @@ public class MyWorld extends World
         prepare();
     }
     
+    public void updateHealth()
+    {
+        health--;
+        if (health == 2)
+        {
+            removeObject(heart3);
+        }
+        else if (health == 1)
+        {
+            removeObject(heart2);
+        }
+        else
+        {
+            removeObject(heart3);
+            Greenfoot.stop();
+        }
+    }
+    
     public void stopped()
     {
         backgroundMusic.pause();
@@ -50,6 +69,7 @@ public class MyWorld extends World
     
     public void started()
     {
+        backgroundMusic.setVolume(40);
         backgroundMusic.playLoop();
     }
 

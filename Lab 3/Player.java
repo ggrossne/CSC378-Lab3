@@ -10,7 +10,7 @@ public class Player extends Actor
 {
     int bulletSpawnRate = 20;
     int score = 0;
-    
+    public GreenfootSound oop = new GreenfootSound("oop.mp3");
     GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right-3.gif");
     
 
@@ -29,7 +29,11 @@ public class Player extends Actor
             
         Actor a = getOneIntersectingObject(Zombie.class);
         if (a != null)
-            Greenfoot.stop();
+        {
+            oop.play();
+            getWorld().removeObject(a);
+            ((MyWorld)getWorld()).updateHealth();
+        }
         
     }
     
