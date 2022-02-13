@@ -12,7 +12,11 @@ public class Zombie extends Actor
     private boolean flip = true;
     int rand_int;
     public GreenfootSound death = new GreenfootSound("z_death.mp3");
+    
     GifImage rightWalk = new GifImage("Zombie Walking Right.gif");
+    GifImage leftWalk = new GifImage("Zombie Walking Left.gif");
+    GifImage rightHurt = new GifImage("Zombie Walking Right Hurt.gif");
+    GifImage leftHurt = new GifImage("Zombie Walking Left Hurt.gif");
     /**
      * Act - do whatever the Zombie wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

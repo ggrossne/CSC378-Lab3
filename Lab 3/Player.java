@@ -11,7 +11,12 @@ public class Player extends Actor
     int bulletSpawnRate = 20;
     int score = 0;
     public GreenfootSound oop = new GreenfootSound("oop.mp3");
+    
     GifImage rightWalk = new GifImage("Rainbow Drag Queen Walking Right.gif");
+    GifImage leftWalk = new GifImage("Rainbow Drag Queen Walking Left.gif");
+    GifImage rightShoot = new GifImage("Rainbow Drag Queen Walking Right Shooting.gif");
+    GifImage leftShoot = new GifImage("Rainbow Drag Queen Walking Left Shooting.gif");
+    
     GreenfootSound pew = new GreenfootSound("laser.mp3");
     
 
