@@ -60,7 +60,8 @@ public class MyWorld extends World
             player.setLocation(600, 400);
             removeObject(heart3);
             // MOVE TO END SCREEN
-            Greenfoot.stop();
+            addObject(new EndScreen(), 600,400);
+            
         }
         
         while (zombieCount > 0) {

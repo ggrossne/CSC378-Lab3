@@ -91,4 +91,5 @@ public class Counter extends UI
         image.setColor(Color.WHITE);
         image.drawString(text + value * 100, 1, 18);
     }
+
 }
